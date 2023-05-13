@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Ui.MainActivity">
+
+<androidx.appcompat.widget.SearchView
+    android:id="@+id/Main_Searchview"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:queryHint="Search Note...."
+    android:layout_alignParentTop="true"
+    android:layout_margin="12dp"
+    app:iconifiedByDefault="false"
+    android:background="@drawable/main_shape"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Main_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Main_Searchview"
+        android:layout_margin="8dp"
+        />
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:id="@+id/Main_FloatingButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginEnd="30dp"
+    android:layout_marginBottom="30dp"
+    app:backgroundTint="@color/white"
+    android:src="@drawable/icon_add"
+    />
+
+</RelativeLayout>
