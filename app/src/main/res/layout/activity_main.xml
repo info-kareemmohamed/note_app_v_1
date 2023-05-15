@@ -11,7 +11,7 @@
     android:id="@+id/Main_Searchview"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    app:queryHint="Search Note...."
+    app:queryHint="@string/main_searchview"
     android:layout_alignParentTop="true"
     android:layout_margin="12dp"
     app:iconifiedByDefault="false"

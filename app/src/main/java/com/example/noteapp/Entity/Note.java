@@ -21,6 +21,13 @@ public class Note {
         Date = date;
     }
 
+    public Note(String title, String description, String date) {
+        Title = title;
+        Description = description;
+        Date = date;
+        Pin=false;
+    }
+
     public Note() {
     }
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Note App</string>
+    <string name="main_searchview">ابحث عن ملاحظة.....</string>
+    <string name="note_title">عنوان:</string>
+    <string name="note_note">ملاحظة:</string>
+    <string name="message_pin">مثبت</string>
+    <string name="message_unpin">غير مثبت</string>
+    <string name="menu_pin_unpin">مثبت/غير مثبت</string>
+    <string name="menu_delete">مسح</string>
+    <string name="message_test_text">الرجاء إدخال العنوان والملاحظة</string>
+
+</resources>

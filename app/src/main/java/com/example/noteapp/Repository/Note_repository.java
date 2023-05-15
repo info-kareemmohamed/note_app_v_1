@@ -12,17 +12,19 @@ import com.example.noteapp.Dao.Note_Dao;
 import com.example.noteapp.Databace.databace;
 import com.example.noteapp.Entity.Note;
 
+import java.util.List;
+
 public class Note_repository {
     private databace Instance;
-    private   Note_Dao dao;
+    private Note_Dao dao;
 
-    public Note_repository(Application application){
-        Instance=databace.getInstance(application);
-        dao= Instance.dao();
+    public Note_repository(Application application) {
+        Instance = databace.getInstance(application);
+        dao = Instance.dao();
     }
 
 
-    public void add_note(Note... note){
+    public void add_note(Note... note) {
         Instance.executorService.execute(new Runnable() {
             @Override
             public void run() {
@@ -32,7 +34,7 @@ public class Note_repository {
 
     }
 
-    public void update_note(Note... note){
+    public void update_note(Note... note) {
         Instance.executorService.execute(new Runnable() {
             @Override
             public void run() {
@@ -41,7 +43,7 @@ public class Note_repository {
         });
     }
 
-    public void delete_note(Note ... note){
+    public void delete_note(Note... note) {
         Instance.executorService.execute(new Runnable() {
             @Override
             public void run() {
@@ -52,12 +54,12 @@ public class Note_repository {
 
     }
 
-    public LiveData<Note> get_all_notes(){
+    public LiveData<List<Note>> get_all_notes() {
         return dao.get_all_notes();
 
     }
 
-    public void delete_note(long id){
+    public void delete_note(long id) {
         Instance.executorService.execute(new Runnable() {
             @Override
             public void run() {
@@ -68,14 +70,16 @@ public class Note_repository {
 
     }
 
-    public void update_pin(long id,boolean pin){
+    public void update_pin(long id, boolean pin) {
         Instance.executorService.execute(new Runnable() {
             @Override
             public void run() {
-                dao.update_pin(id,pin);
+                dao.update_pin(id, pin);
             }
         });
 
 
     }
+
 }
+

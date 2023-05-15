@@ -29,10 +29,10 @@
     </androidx.appcompat.widget.Toolbar>
 
    <EditText
-    android:id="@+id/Note_titly"
+    android:id="@+id/Note_title"
     android:layout_width="match_parent"
     android:layout_height="56dp"
-    android:hint="Titly: "
+    android:hint="@string/note_title"
     android:maxLines="1"
        android:layout_margin="8dp"
     android:padding="8dp"
@@ -48,7 +48,7 @@
         android:id="@+id/Note_note"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Note: "
+        android:hint="@string/note_note"
         android:layout_margin="8dp"
         android:padding="8dp"
         android:textColor="@color/black"

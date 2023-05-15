@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Note App</string>
+    <string name="main_searchview">Search Note....</string>
+    <string name="note_title">Titel:</string>
+    <string name="note_note">Note:</string>
+    <string name="message_pin">Pinned</string>
+    <string name="message_unpin">Unpinned</string>
+    <string name="menu_pin_unpin">Pin/Unpin</string>
+    <string name="menu_delete">Delete</string>
+    <string name="message_test_text">please Enter Title And Note</string>
 </resources>

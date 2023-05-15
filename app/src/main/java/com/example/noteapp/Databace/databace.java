@@ -12,22 +12,21 @@ import com.example.noteapp.Entity.Note;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Note.class},version = 1)
+@Database(entities = {Note.class}, version = 1)
 public abstract class databace extends RoomDatabase {
     public abstract Note_Dao dao();
+
     private static volatile databace Instance;
-    public ExecutorService executorService= Executors.newFixedThreadPool(4);
+    public ExecutorService executorService = Executors.newFixedThreadPool(4);
 
 
-    public static synchronized databace getInstance(Context context){
-        if(Instance==null){
-            Instance= Room.databaseBuilder(context.getApplicationContext(),databace.class,"Notebook").fallbackToDestructiveMigration().build();
+    public static synchronized databace getInstance(Context context) {
+        if (Instance == null) {
+            Instance = Room.databaseBuilder(context.getApplicationContext(), databace.class, "Notebook").fallbackToDestructiveMigration().build();
         }
 
         return Instance;
     }
-
-
 
 
 }
